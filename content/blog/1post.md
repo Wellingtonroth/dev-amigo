@@ -16,4 +16,17 @@ Anyway, I digress. Back to my chatbot. I've been training it on a large dataset 
 
 But for now, it's time for me to take a break and go for a **run**. I find that exercise helps me clear my mind and come up with new ideas. Who knows, maybe I'll stumble upon a new insight that will help me break free from my Markovian cycle. 
 
+```
+const { data: posts } = await useAsyncData('posts', () =>
+  queryContent('/blog').find(),
+);
+
+```
+
+Hello, this is a [Markdown]{.px-1 .bg-blue-200 .rounded-lg} file!
+
+::div{.w-full .bg-green-200 .p-4}
+Another way to use it!
+::
+
 Until next time!

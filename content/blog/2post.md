@@ -1,7 +1,7 @@
 ---
-title: Not so Lifeeee
-author: Eu mesmoooo
-description: Some description hereeeeeeeee
+title: Arroz e feijao
+author: salada
+description: descrição salads
 ---
 
 # The Mystery of the Haunted House
@@ -19,3 +19,16 @@ To my surprise, I found myself face-to-face with a group of teenagers, who were 
 As it turns out, the mysterious occurrences were nothing more than a group of bored teenagers playing a prank. But even though the case was solved, I couldn't help but feel like there was still something strange about that old house. 
 
 I packed up my things and headed back to the city, but I couldn't shake the feeling that I had uncovered only a small part of the mystery of the haunted house.
+
+```
+const { data: posts } = await useAsyncData('posts', () =>
+  queryContent('/blog').find(),
+);
+
+```
+
+Hello, this is a [Markdown]{.px-1 .bg-blue-200 .rounded-lg} file!
+
+::div{.w-full .bg-green-200 .p-4}
+Another way to use it!
+::
