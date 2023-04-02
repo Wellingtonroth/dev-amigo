@@ -1,3 +1,9 @@
+---
+title: Not so Lifeeee
+author: Eu mesmoooo
+description: Some description hereeeeeeeee
+---
+
 # The Mystery of the Haunted House
 
 It was a dark and stormy night when I arrived at the old mansion on the hill. As a seasoned detective, I've seen my fair share of spooky places, but there was something about this house that gave me the chills.

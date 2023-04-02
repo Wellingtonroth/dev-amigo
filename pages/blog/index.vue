@@ -6,12 +6,22 @@ const { data: posts } = await useAsyncData('posts', () =>
 
 <template>
   <section>
-    <div>sou o index.vue na pasta blog</div>
+    <header class="shadow-sm bg-white">
+      <nav class="container mx-auto p-4 flex justify-between">
+        <NuxtLink to="/" class="font-bold">Nuxt Dojo</NuxtLink>
+        <ul class="flex gap-4">
+          <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink to="/about">About</NuxtLink></li>
+          <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+        </ul>
+      </nav>
+    </header>
+
     <ul>
       <li v-for="post in posts" :key="post._id">
-        <nuxt-link :to="post._path">
+        <NuxtLink :to="post._path">
           {{ post.title }}
-        </nuxt-link>
+        </NuxtLink>
       </li>
     </ul>
   </section>

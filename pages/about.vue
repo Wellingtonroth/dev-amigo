@@ -10,8 +10,8 @@
         </ul>
       </nav>
     </header>
-
-    <div>HOME! sou o index.vue</div>
+    
+    <div>ABOUT! sou o about.vue</div>
   </section>
 </template>
 

@@ -1,7 +1,7 @@
 ---
 title: Not so Life
-description: Some description here
 author: Eu mesmo
+description: Some description here
 ---
 
 # My Life as a Markov Chain
