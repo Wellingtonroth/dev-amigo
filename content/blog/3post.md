@@ -1,8 +1,8 @@
 ---
 title: "Random Post"
-date: "2023-03-26"
 author: Wellington Roth
 description: Some description here Wellington Roth
+createdAt: "2023-03-22T12:34:56.789Z"
 ---
 
 ## Introduction

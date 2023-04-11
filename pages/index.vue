@@ -1,18 +1,11 @@
-<!-- <script lang="ts">
-import { defineComponent, ref, computed, onMounted } from 'vue';
-
-export default defineComponent({
-  setup() {
-
-  }
-});
-</script> -->
 <script setup>
 const { data: posts } = await useAsyncData('posts', () =>
-  queryContent('/blog').find([]),
+  queryContent('/blog').find(),
 );
 
-const lastThreePosts = posts.value.slice(0, 3);
+const lastThreePosts = posts.value
+  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort posts by createdAt in descending order
+  .slice(0, 3); // Get the first 3 posts after sorting
 </script>
 
 <template>
