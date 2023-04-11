@@ -29,7 +29,7 @@ const lastThreePosts = posts.value
 
   <div class="box post">
     <h3 class="last-posts">Ultimos posts</h3>
-    <div  v-for="(post, index) in lastThreePosts" :key="index">
+    <NuxtLink v-for="(post, index) in lastThreePosts" :key="index" :to="post._path">
       <div class="flex mt-[20px]">
         <div style="width: 280px; height: 154px; background-color: grey"></div>
         <div class="content">
@@ -42,7 +42,7 @@ const lastThreePosts = posts.value
           </div>
         </div>
       </div>
-    </div>
+    </NuxtLink>
 
     <NuxtLink to="/blog" class="more">
       Ver mais
