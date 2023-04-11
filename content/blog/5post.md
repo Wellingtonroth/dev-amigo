@@ -1,5 +1,5 @@
 ---
-title: Not so Life
+title: Not so Life2
 author: Eu mesmo
 createdAt: "2023-03-20"
 description: Some description here

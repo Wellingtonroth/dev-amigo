@@ -1,4 +1,19 @@
-<script setup></script>
+<!-- <script lang="ts">
+import { defineComponent, ref, computed, onMounted } from 'vue';
+
+export default defineComponent({
+  setup() {
+
+  }
+});
+</script> -->
+<script setup>
+const { data: posts } = await useAsyncData('posts', () =>
+  queryContent('/blog').find([]),
+);
+
+const lastThreePosts = posts.value.slice(0, 3);
+</script>
 
 <template>
   <div class="box">
@@ -21,44 +36,21 @@
 
   <div class="box post">
     <h3 class="last-posts">Ultimos posts</h3>
-    <div class="flex mt-[20px]">
-      <div style="width: 280px; height: 154px; background-color: grey"></div>
-      <div class="content">
-        <h4 class="title">Título do post</h4>
-        <p>Descição do post Lorem ipson dolar sit met Lorem ipson dolar</p>
-        <div class="tags">
-          <span class="tag">css</span>
-          <span class="tag">html</span>
-          <span class="tag">javascript</span>
+    <div  v-for="(post, index) in lastThreePosts" :key="index">
+      <div class="flex mt-[20px]">
+        <div style="width: 280px; height: 154px; background-color: grey"></div>
+        <div class="content">
+          <h4 class="title">{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+          <div class="tags">
+            <span class="tag">css</span>
+            <span class="tag">html</span>
+            <span class="tag">javascript</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="flex mt-[20px]">
-      <div style="width: 280px; height: 154px; background-color: grey"></div>
-      <div class="content">
-        <h4 class="title">Título do post</h4>
-        <p>Descição do post Lorem ipson dolar sit met Lorem ipson dolar</p>
-        <div class="tags">
-          <span class="tag">css</span>
-          <span class="tag">html</span>
-          <span class="tag">javascript</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex mt-[24px]">
-      <div style="width: 280px; height: 154px; background-color: grey"></div>
-      <div class="content">
-        <h4 class="title">Título do post</h4>
-        <p>Descição do post Lorem ipson dolar sit met Lorem ipson dolar</p>
-        <div class="tags">
-          <span class="tag">css</span>
-          <span class="tag">html</span>
-          <span class="tag">javascript</span>
-        </div>
-      </div>
-    </div>
     <NuxtLink to="/blog" class="more">
       Ver mais
     </NuxtLink>

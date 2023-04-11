@@ -1,6 +1,7 @@
 ---
 title: Arroz e feijao
 author: salada
+createdAt: "2023-03-26"
 description: descrição salads
 ---
 
