@@ -3,6 +3,8 @@ title: Not so Life2
 author: Eu mesmo
 description: Some description here
 createdAt: "2023-03-24T12:34:56.789Z"
+subjects:
+  - JavaScript
 ---
 
 # My Life as a Markov Chain

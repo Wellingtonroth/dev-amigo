@@ -3,6 +3,9 @@ title: Arroz e feijao
 author: salada
 description: descrição salads
 createdAt: "2023-03-21T12:34:56.789Z"
+subjects:
+  - CSS
+  - JavaScript
 ---
 
 # The Mystery of the Haunted House

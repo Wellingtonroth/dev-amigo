@@ -3,6 +3,10 @@ title: "Random Post"
 author: Wellington Roth
 description: Some description here Wellington Roth
 createdAt: "2023-03-22T12:34:56.789Z"
+subjects:
+  - HTML
+  - CSS
+  - JavaScript
 ---
 
 ## Introduction
