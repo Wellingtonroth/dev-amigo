@@ -29,16 +29,19 @@ const lastThreePosts = posts.value
 
   <div class="box post">
     <h3 class="last-posts">Ultimos posts</h3>
-    <NuxtLink v-for="(post, index) in lastThreePosts" :key="index" :to="post._path">
-      <div class="flex mt-[20px]">
+    <NuxtLink 
+      v-for="(post, index) in lastThreePosts" 
+      :key="index"
+      :to="post._path"
+      class="link"
+    >
+      <div class="post-link">
         <div style="width: 280px; height: 154px; background-color: grey"></div>
         <div class="content">
           <h4 class="title">{{ post.title }}</h4>
           <p>{{ post.description }}</p>
           <div class="tags">
-            <span class="tag">css</span>
-            <span class="tag">html</span>
-            <span class="tag">javascript</span>
+            <span class="subjects">{{ post.subjects.join(' - ') }}</span>
           </div>
         </div>
       </div>
@@ -52,7 +55,7 @@ const lastThreePosts = posts.value
 
 <style scoped>
 .box {
-  @apply flex w-2/4 h-full;
+  @apply flex w-2/4 h-full mr-2;
 }
 
 .presentation {
@@ -64,11 +67,18 @@ const lastThreePosts = posts.value
 }
 
 .post {
-  @apply flex-col justify-center ml-[30px];
+  @apply flex-col justify-center;
 }
 
+.link {
+  @apply hover:bg-slate-300	;
+}
+
+.post-link {
+  @apply flex mt-[10px] mb-[10px] ml-[30px];
+}
 .last-posts {
-  @apply text-[18px] font-medium;
+  @apply ml-[30px] text-[18px] font-medium;
 }
 
 .content {
@@ -83,11 +93,11 @@ const lastThreePosts = posts.value
   @apply text-[12px] uppercase font-medium;
 }
 
-.tag {
+.subjects {
   @apply mr-[6px] text-[#023859];
 }
 
 .more {
-  @apply w-fit text-[12px] uppercase font-medium text-[#023859] mt-[24px];
+  @apply w-fit text-[12px] uppercase font-medium text-[#023859] mt-[24px] ml-[30px];
 }
 </style>
