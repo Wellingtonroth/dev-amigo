@@ -1,5 +1,4 @@
 <script setup>
-
 const route = useRoute();
 const { data } = useAsyncData(`content-${route.path}`, () =>
   queryContent().where({_path: route.path}).findOne()
@@ -7,7 +6,8 @@ const { data } = useAsyncData(`content-${route.path}`, () =>
 </script>
 
 <template>
-  <main>    
+  <main>
+    <NuxtLink to="/blog">Voltar</NuxtLink>
     <div style="padding: 20px;">
       <title>{{ data.title }}</title>
       <p>{{ data.author }} author</p>
