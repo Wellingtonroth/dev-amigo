@@ -17,6 +17,7 @@
     >
       <div class="image-container">
         <img
+          :src="`/images/${information.image}.png`"
           :alt="information.alt" 
           class="image" 
           :style="opacityImage(information.id)" 
