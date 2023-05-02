@@ -17,10 +17,25 @@
     >
       <div class="image-container">
         <img
-          :src="`/images/${information.image}.png`"
+          v-if="information.image === 'brain'" 
+          src="@/assets/images/brain.png"
           :alt="information.alt" 
+          :style="opacityImage(information.id)"
           class="image" 
+        />
+        <img
+          v-if="information.image === 'heart'" 
+          src="@/assets/images/heart.png"
+          :alt="information.alt"
           :style="opacityImage(information.id)" 
+          class="image" 
+        />
+        <img
+          v-if="information.image === 'computer'" 
+          src="@/assets/images/computer.png"
+          :alt="information.alt" 
+          :style="opacityImage(information.id)"
+          class="image" 
         />
         <div class="caption" v-if="activeAboutName[information.id]">
           {{ information.name }}
@@ -65,7 +80,7 @@ export default {
 
     const activeAboutName = ref([]);
     const showDescription = ref(false);
-    const selectedInformation = ref(null); // Add a reactive variable to store the selected information
+    const selectedInformation = ref(null);
 
     const onHoverEnter = (id) => {
       state.hoverActive[id] = true;
@@ -86,12 +101,12 @@ export default {
 
     const handleDescription = (id) => {
       onHoverLeave(id);
-      selectedInformation.value = informationsList.value.find(info => info.id === id); // Find the selected information object
-      showDescription.value = true; // Set showDescription to true to display the description
+      selectedInformation.value = informationsList.value.find(info => info.id === id);
+      showDescription.value = true; 
     };
 
     const backToList = () => {
-      showDescription.value = false; // Set showDescription to false to display the list
+      showDescription.value = false;
     };
 
     return {
@@ -121,7 +136,6 @@ export default {
 }
 
 .caption {
-  /* Your styles for the caption */
   position: absolute;
   top: 0;
   left: 0;
