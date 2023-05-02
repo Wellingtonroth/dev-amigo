@@ -131,23 +131,12 @@ export default {
 }
 
 .image-container {
-  position: relative;
-  cursor: pointer;
+  @apply cursor-pointer relative;
 }
 
 .caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
+  @apply absolute bottom-0 left-0 right-0 top-0 flex items-center	justify-center font-bold text-4xl text-black;
   transition: opacity 2s ease;
-  font-size: 20px;
-  font-weight: bold;
 }
 </style>
 
