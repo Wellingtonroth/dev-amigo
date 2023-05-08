@@ -79,7 +79,7 @@ const setColorTheme = (newTheme) => {
 
 <style scoped>
 .router-link-exact-active {
-  @apply text-yellow-500 border-b-[1px] border-yellow-500;
+  @apply border-b-[2px] border-yellow-400;
 }
 
 .main {
@@ -93,7 +93,7 @@ const setColorTheme = (newTheme) => {
   @apply flex gap-4 font-medium;
 }
 .item {
-  @apply pb-1 hover:text-yellow-400;
+  @apply pb-1 hover:text-yellow-500;
 }
 
 .content {

@@ -11,7 +11,7 @@ const lastThreePosts = posts.value
 
 const presentationList = ref([
   { 
-    title: 'Olá, me chamo Wellington roth.',
+    title: 'Olá, me chamo Wellington Roth.',
     presentation: 'Sou desenvolvedor frontend'
   },
   { 
@@ -59,10 +59,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="box">
+  <div class="flex-col justify-center items-center box">
     <div class="presentation" v-if="currentPresentation" :key="currentPresentation.id">
-      <h3>{{ currentPresentation.title }}</h3>
-      <p>{{ currentPresentation.presentation }}</p>
+      <h3 class="presentation-title">{{ currentPresentation.title }}</h3>
+      <p class="presentation-text">{{ currentPresentation.presentation }}</p>
     </div>
 
     <div class="bullets">
@@ -87,8 +87,14 @@ onMounted(() => {
       <div class="post-link">
         <div style="width: 280px; height: 154px; background-color: grey"></div>
         <div class="content">
-          <h4 class="title">{{ post.title }}</h4>
-          <p>{{ post.description }}</p>
+          <div>
+            <h4 class="post-title">
+              {{ post.title }}
+            </h4>
+            <p class="posts-description">
+              {{ post.description }}
+            </p>
+          </div>
           <div class="tags">
             <span class="subjects">{{ post.subjects.join(' - ') }}</span>
           </div>
@@ -127,15 +133,19 @@ onMounted(() => {
   @apply flex mt-[10px] mb-[10px] ml-[30px];
 }
 .last-posts {
-  @apply ml-[30px] text-[18px] font-medium;
+  @apply ml-[30px] text-[18px] font-medium text-[#222];
 }
 
 .content {
   @apply flex flex-col justify-between ml-[26px];
 }
 
-.title{
-  @apply text-[18px] font-bold;
+.post-title{
+  @apply text-[18px] font-semibold	 text-[#222];
+}
+
+.posts-description {
+  @apply text-base text-[#3a3a3a];
 }
 
 .tags {
@@ -151,22 +161,22 @@ onMounted(() => {
 }
 
 .bullets {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+  @apply flex justify-center mt-[16px];
 }
 
 .bullets span {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  background-color: #ccc;
-  display: inline-block;
-  cursor: pointer;
+  @apply h-[16px] w-[16px] rounded-full mr-[8px] bg-[#ccc] inline-block cursor-pointer;
 }
 
 .bullets span.active {
-  background-color: #f00;
+  @apply bg-[#facc15];
+}
+
+.presentation-title {
+  @apply text-xl font-medium text-[#222];
+}
+
+.presentation-text {
+  @apply text-base text-[#3a3a3a];
 }
 </style>

@@ -55,21 +55,21 @@ export default {
         id: 1,
         image: 'brain',
         alt: 'brain',
-        name: 'Core',
+        name: 'Essência',
         description: 'Alguma descrição grande aquiii 111'
       },
       { 
         id: 2,
         image: 'computer',
         alt: 'computer',
-        name: 'Work',
+        name: 'Trabalho',
         description: 'Alguma descrição grande aquiii 2222222'
       },
       { 
         id: 3,
         image: 'heart',
         alt: 'heart',
-        name: 'Paixões',
+        name: 'Paixão',
         description: 'Alguma descrição grande aquiii 3'
       },
     ]);
