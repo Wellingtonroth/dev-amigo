@@ -1,19 +1,12 @@
 <template>
-  <div v-if="showDescription">
-    <p @click="backToList">VOLTAR</p>
-    <div class="description">
-      {{ selectedInformation.description }}
-    </div>
-  </div>
-
-  <ul class="main" v-if="!showDescription">
+   <ul class="main" v-if="!showDescription">
     <li 
       v-for="information in informationsList" 
       :key="information.id"
       @click="handleDescription(information.id)"
       @mouseenter="onHoverEnter(information.id)"
       @mouseleave="onHoverLeave(information.id)"
-      class="list-hover"
+      class="list"
     >
       <div class="image-container">
         <img
@@ -43,6 +36,15 @@
       </div>
     </li>
   </ul>
+
+  <div v-if="showDescription">
+    <p @click="backToList">
+      VOLTAR
+    </p>
+    <div class="description">
+      {{ selectedInformation.description }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -127,7 +129,7 @@ export default {
 
 <style scoped>
 .main {
-  @apply flex justify-around	items-center w-full;
+  @apply flex justify-center items-center w-full;
 }
 
 .image-container {
@@ -137,6 +139,14 @@ export default {
 .caption {
   @apply absolute bottom-0 left-0 right-0 top-0 flex items-center	justify-center font-bold text-4xl text-black;
   transition: opacity 2s ease;
+}
+
+.list {
+  @apply ml-12;
+}
+
+.list:first-child {
+  @apply ml-0 mr-2;
 }
 </style>
 

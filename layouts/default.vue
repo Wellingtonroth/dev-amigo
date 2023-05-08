@@ -97,7 +97,7 @@ const setColorTheme = (newTheme) => {
 }
 
 .content {
-  @apply main-container flex pb-4 h-full;
+  @apply flex h-full;
 }
 
 .footer {
