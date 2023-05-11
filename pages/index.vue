@@ -126,7 +126,7 @@ onMounted(() => {
 }
 
 .link {
-  @apply hover:bg-slate-300	;
+  @apply hover:bg-[#f2f2f2]	;
 }
 
 .post-link {
@@ -141,7 +141,7 @@ onMounted(() => {
 }
 
 .post-title{
-  @apply text-[18px] font-semibold	 text-[#222];
+  @apply text-[18px] font-semibold text-[#222];
 }
 
 .posts-description {

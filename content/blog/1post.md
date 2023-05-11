@@ -1,7 +1,7 @@
 ---
 title: Not so Life
 author: Eu mesmo
-description: Some description here
+description: Some description hereSome description hereSome description here Some description here Some description here Some description here Some description hereSome description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here 
 createdAt: "2023-03-20T12:34:56.789Z"
 subjects:
   - CSS
