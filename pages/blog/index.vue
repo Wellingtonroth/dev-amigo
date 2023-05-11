@@ -7,9 +7,10 @@ const { data: posts } = await useAsyncData('posts', () =>
 <template>
   <section>
     <ul>
-      <li v-for="post in posts" :key="post._id">
+      <li v-for="post in posts" :key="post._id" class="">
         <NuxtLink :to="post._path">
-          {{ post.title }}
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.description }}</p>
         </NuxtLink>
       </li>
     </ul>
