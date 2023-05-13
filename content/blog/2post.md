@@ -1,7 +1,8 @@
 ---
 title: Arroz e feijao
 author: salada
-description: descrição salads
+summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
+text: descrição salads
 createdAt: "2023-03-21T12:34:56.789Z"
 subjects:
   - CSS

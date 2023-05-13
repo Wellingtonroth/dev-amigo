@@ -6,13 +6,18 @@ const { data: posts } = await useAsyncData('posts', () =>
 
 <template>
   <div class="main-box">
+    <div class="filter-list">
+      <ul class="flex">
+        <li>lista de subjects para filtrar os posts</li>
+      </ul>
+    </div>
     <ul class="w-[760px]">
       <li v-for="post in posts" :key="post._id" class="post-link">
         <NuxtLink :to="post._path">
           <div class="flex justify-between">
             <div class="w-[80%]">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="posts-description">{{ post.description }}</p>
+              <p class="posts-description">{{ post.summary }}</p>
             </div>
             <div style="width: 60px; height: 60px; background-color: grey"></div>
           </div>
@@ -29,7 +34,11 @@ const { data: posts } = await useAsyncData('posts', () =>
 
 <style scoped>
 .main-box {
-  @apply flex justify-center items-center w-full h-full;
+  @apply flex justify-center items-center flex-col w-full h-full;
+}
+
+.filter-list {
+  @apply flex justify-end w-[760px] mb-5;
 }
 
 .post-link {
