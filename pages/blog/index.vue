@@ -2,13 +2,22 @@
 const { data: posts } = await useAsyncData('posts', () =>
   queryContent('/blog').find(),
 );
+
+const getUniqueSubjects = () => {
+    const subjectsList = posts.value.map((post) => post.subjects).flat();
+    return [...new Set(subjectsList)];
+  };
+
+const uniqueSubjects = getUniqueSubjects();
 </script>
 
 <template>
   <div class="main-box">
     <div class="filter-list">
       <ul class="flex">
-        <li>lista de subjects para filtrar os posts</li>
+        <li v-for="subject in uniqueSubjects" :key="subject">
+          {{ subject }}
+        </li>
       </ul>
     </div>
     <ul class="w-[760px]">
@@ -17,7 +26,7 @@ const { data: posts } = await useAsyncData('posts', () =>
           <div class="flex justify-between">
             <div class="w-[80%]">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="posts-description">{{ post.summary }}</p>
+              <p class="posts-summary">{{ post.summary }}</p>
             </div>
             <div style="width: 60px; height: 60px; background-color: grey"></div>
           </div>
@@ -49,7 +58,7 @@ const { data: posts } = await useAsyncData('posts', () =>
   @apply text-xl font-medium text-[#222] mb-1;
 }
 
-.posts-description {
+.posts-summary {
   @apply text-base text-[#3a3a3a];
 }
 
