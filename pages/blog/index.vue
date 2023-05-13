@@ -1,27 +1,62 @@
 <script setup>
+import { ref, computed } from 'vue';
+
+const selectedSubjects = ref([]);
+
 const { data: posts } = await useAsyncData('posts', () =>
   queryContent('/blog').find(),
 );
 
 const getUniqueSubjects = () => {
-    const subjectsList = posts.value.map((post) => post.subjects).flat();
-    return [...new Set(subjectsList)];
-  };
+  const subjectsList = posts.value.map((post) => post.subjects).flat();
+  return [...new Set(subjectsList)];
+};
 
 const uniqueSubjects = getUniqueSubjects();
+
+const toggleSubject = (subject) => {
+  if (selectedSubjects.value.includes(subject)) {
+    selectedSubjects.value = selectedSubjects.value.filter(
+      (item) => item !== subject
+    );
+  } else {
+    selectedSubjects.value = [...selectedSubjects.value, subject];
+  }
+};
+
+const filteredPosts = computed(() =>
+  posts.value.filter((post) => {
+    if (selectedSubjects.value.length === 0) {
+      return true;
+    }
+    return post.subjects.some((subject) =>
+      selectedSubjects.value.includes(subject)
+    );
+  })
+);
 </script>
 
 <template>
   <div class="main-box">
     <div class="filter-list">
       <ul class="flex">
-        <li v-for="subject in uniqueSubjects" :key="subject">
+        <li
+          class="filter-subject"
+          v-for="subject in uniqueSubjects"
+          :key="subject"
+          @click="toggleSubject(subject)"
+          :class="{ 'subject-filtered': selectedSubjects.includes(subject) }"
+        >
           {{ subject }}
         </li>
       </ul>
     </div>
     <ul class="w-[760px]">
-      <li v-for="post in posts" :key="post._id" class="post-link">
+      <li
+        v-for="post in filteredPosts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))"
+        :key="post._id"
+        class="post-link"
+      >
         <NuxtLink :to="post._path">
           <div class="flex justify-between">
             <div class="w-[80%]">
@@ -34,20 +69,21 @@ const uniqueSubjects = getUniqueSubjects();
             <span class="subjects">{{ post.subjects.join(' - ') }}</span>
           </div>
         </NuxtLink>
-        <div class="border"></div>
+        <div class="border-b-[1px] border-gray-200 my-5"></div>
       </li>
     </ul>
   </div>
 </template>
 
 
+
 <style scoped>
 .main-box {
-  @apply flex justify-center items-center flex-col w-full h-full;
+  @apply flex items-center flex-col w-full;
 }
 
 .filter-list {
-  @apply flex justify-end w-[760px] mb-5;
+  @apply flex justify-end w-[760px] mb-5 pb-5 border-b-[1px] border-gray-200;
 }
 
 .post-link {
@@ -62,15 +98,19 @@ const uniqueSubjects = getUniqueSubjects();
   @apply text-base text-[#3a3a3a];
 }
 
-.border {
-  @apply border-b-[1px] border-gray-200 my-5
-}
-
 .tags {
   @apply text-[12px] uppercase font-medium mt-5;
 }
 
 .subjects {
-  @apply mr-[6px] text-[#023859];
+  @apply mr-[6px] text-[#023859] bg-[#f2f2f2] py-1 px-2 rounded-xl;
+}
+
+.filter-subject {
+  @apply mr-5 text-[12px] uppercase font-medium cursor-pointer hover:text-yellow-500;;
+}
+
+.subject-filtered {
+  @apply border-b-[2px] border-yellow-400;
 }
 </style>

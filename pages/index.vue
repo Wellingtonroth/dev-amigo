@@ -59,52 +59,59 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex-col justify-center items-center box">
-    <div class="presentation" v-if="currentPresentation" :key="currentPresentation.id">
-      <h3 class="presentation-title">{{ currentPresentation.title }}</h3>
-      <p class="presentation-text">{{ currentPresentation.presentation }}</p>
+  <div class="flex mr-[100px] ml-[100px]">
+    <div class="flex-col justify-center items-center box">
+      <div class="presentation" v-if="currentPresentation" :key="currentPresentation.id">
+        <h3 class="presentation-title">
+          {{ currentPresentation.title }}
+        </h3>
+        <p class="presentation-text">
+          {{ currentPresentation.presentation }}
+        </p>
+      </div>
+
+      <div class="bullets">
+        <span 
+          v-for="(list, index) in presentationList" 
+          :key="index" 
+          :class="{ active: index === currentIndex }" 
+          @click="changePresentation(index); resetCountdown()"
+        >
+        </span>
+      </div>
     </div>
 
-    <div class="bullets">
-      <span 
-        v-for="(list, index) in presentationList" 
-        :key="index" 
-        :class="{ active: index === currentIndex }" 
-        @click="changePresentation(index); resetCountdown()"
+    <div class="box post">
+      <h3 class="last-posts">Ultimos posts</h3>
+      <NuxtLink 
+        v-for="(post, index) in lastThreePosts" 
+        :key="index"
+        :to="post._path"
+        class="link"
       >
-      </span>
-    </div>
-  </div>
+        <div class="post-link">
+          <img :src="post.coverImage" alt="Cover Image" style="width: 200px; height: 154px;">
 
-  <div class="box post">
-    <h3 class="last-posts">Ultimos posts</h3>
-    <NuxtLink 
-      v-for="(post, index) in lastThreePosts" 
-      :key="index"
-      :to="post._path"
-      class="link"
-    >
-      <div class="post-link">
-        <div style="width: 280px; height: 154px; background-color: grey"></div>
-        <div class="content">
-          <div>
-            <h4 class="post-title">
-              {{ post.title }}
-            </h4>
-            <p class="posts-description">
-              {{ post.description }}
-            </p>
-          </div>
-          <div class="tags">
-            <span class="subjects">{{ post.subjects.join(' - ') }}</span>
+          <div class="content">
+            <div>
+              <h4 class="post-title">
+                {{ post.title }}
+              </h4>
+              <p class="posts-description">
+                {{ post.summary }}
+              </p>
+            </div>
+            <div class="tags">
+              <span class="subjects">{{ post.subjects.join(' - ') }}</span>
+            </div>
           </div>
         </div>
-      </div>
-    </NuxtLink>
+      </NuxtLink>
 
-    <NuxtLink to="/blog" class="more">
-      Ver mais
-    </NuxtLink>
+      <NuxtLink to="/blog" class="more">
+        Ver mais
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -153,7 +160,7 @@ onMounted(() => {
 }
 
 .subjects {
-  @apply mr-[6px] text-[#023859];
+  @apply mr-[6px] text-[#023859] bg-[#f2f2f2] py-1 px-2 rounded-xl;
 }
 
 .more {
@@ -177,6 +184,6 @@ onMounted(() => {
 }
 
 .presentation-text {
-  @apply text-base text-[#3a3a3a];
+  @apply text-base text-[#3a3a3a] max-w-[500px];
 }
 </style>

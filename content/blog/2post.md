@@ -1,5 +1,6 @@
 ---
 title: Arroz e feijao
+coverImage: /assets/images/avatar.png
 author: salada
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 text: descrição salads
@@ -10,6 +11,7 @@ subjects:
 ---
 
 # The Mystery of the Haunted House
+![A bowl of rice and beans](https://example.com/images/rice_and_beans.jpg)
 
 It was a dark and stormy night when I arrived at the old mansion on the hill. As a seasoned detective, I've seen my fair share of spooky places, but there was something about this house that gave me the chills.
 

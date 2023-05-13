@@ -101,7 +101,7 @@ const setColorTheme = (newTheme) => {
 }
 
 .footer {
-  @apply main-container flex justify-between py-10 border-t-[1px] border-black dark:bg-slate-900;
+  @apply main-container flex justify-between py-10 mt-10 border-t-[1px] border-black dark:bg-slate-900;
 }
 
 .socials-list {
