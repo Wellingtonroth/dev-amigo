@@ -63,7 +63,7 @@ const filteredPosts = computed(() =>
               <h2 class="post-title">{{ post.title }}</h2>
               <p class="posts-summary">{{ post.summary }}</p>
             </div>
-            <div style="width: 60px; height: 60px; background-color: grey"></div>
+          <img :src="post.coverImage" alt="Cover Image" style="width: 80px; height: 80px;">
           </div>
           <div class="tags">
             <span class="subjects">{{ post.subjects.join(' - ') }}</span>

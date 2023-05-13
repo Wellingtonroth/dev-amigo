@@ -1,6 +1,6 @@
 ---
 title: Arroz e feijao
-coverImage: /assets/images/avatar.png
+coverImage: /_nuxt/assets/images/avatar.png
 author: salada
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 text: descrição salads

@@ -1,5 +1,6 @@
 ---
 title: "Random Post"
+coverImage: /_nuxt/assets/images/avatar.png
 author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 text: Some description here Wellington Roth
