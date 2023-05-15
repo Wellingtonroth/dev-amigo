@@ -3,7 +3,6 @@ title: Not so Life2
 coverImage: /_nuxt/assets/images/avatar.png
 author: Eu mesmo
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
-text: Some description here
 createdAt: "2023-03-24T12:34:56.789Z"
 subjects:
   - JavaScript

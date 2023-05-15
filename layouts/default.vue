@@ -6,7 +6,7 @@ const setColorTheme = (newTheme) => {
 
 <template>
   <div class="main">
-    <header class="dark:bg-slate-900">
+    <header>
       <nav class="navigation">
         <ul class="list">
           <li>
@@ -83,7 +83,7 @@ const setColorTheme = (newTheme) => {
 }
 
 .main {
-  @apply flex flex-col justify-between h-[100vh];
+  @apply flex flex-col justify-between min-h-[100vh] dark:bg-[#1a202c];
 }
 
 .navigation {
@@ -93,7 +93,7 @@ const setColorTheme = (newTheme) => {
   @apply flex gap-4 font-medium;
 }
 .item {
-  @apply pb-1 hover:text-yellow-500;
+  @apply pb-1 hover:text-yellow-500 dark:text-gray-200;
 }
 
 .content {
@@ -101,7 +101,7 @@ const setColorTheme = (newTheme) => {
 }
 
 .footer {
-  @apply main-container flex justify-between py-10 mt-10 border-t-[1px] border-black dark:bg-slate-900;
+  @apply main-container flex justify-between py-10 mt-10 border-t-[1px] border-black dark:border-gray-700;
 }
 
 .socials-list {

@@ -3,7 +3,6 @@ title: Arroz e feijao
 coverImage: /_nuxt/assets/images/avatar.png
 author: salada
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
-text: descrição salads
 createdAt: "2023-03-21T12:34:56.789Z"
 subjects:
   - CSS

@@ -124,6 +124,14 @@ onMounted(() => {
   @apply flex flex-col justify-center items-center;
 }
 
+.presentation-title {
+  @apply text-xl font-medium text-[#222] dark:text-gray-200;
+}
+
+.presentation-text {
+  @apply text-base text-[#3a3a3a] max-w-[500px] dark:text-gray-200;
+}
+
 .name {
   @apply text-[24px];
 }
@@ -133,14 +141,14 @@ onMounted(() => {
 }
 
 .link {
-  @apply hover:bg-[#f2f2f2]	;
+  @apply hover:bg-[#f2f2f2]	dark:hover:bg-[#2d3748];
 }
 
 .post-link {
   @apply flex mt-[10px] mb-[10px] ml-[30px];
 }
 .last-posts {
-  @apply ml-[30px] text-[18px] font-medium text-[#222];
+  @apply ml-[30px] text-[18px] font-medium text-[#222] dark:text-gray-200;
 }
 
 .content {
@@ -148,11 +156,11 @@ onMounted(() => {
 }
 
 .post-title{
-  @apply text-[18px] font-semibold text-[#222];
+  @apply text-[18px] font-semibold text-[#222] dark:text-gray-200;
 }
 
 .posts-description {
-  @apply text-base text-[#3a3a3a];
+  @apply text-base text-[#3a3a3a] dark:text-gray-200;
 }
 
 .tags {
@@ -164,7 +172,7 @@ onMounted(() => {
 }
 
 .more {
-  @apply w-fit text-[12px] uppercase font-medium text-[#023859] mt-[24px] ml-[30px];
+  @apply w-fit text-[12px] uppercase font-medium text-[#023859] mt-[24px] ml-[30px] dark:text-gray-200;
 }
 
 .bullets {
@@ -177,13 +185,5 @@ onMounted(() => {
 
 .bullets span.active {
   @apply bg-[#facc15];
-}
-
-.presentation-title {
-  @apply text-xl font-medium text-[#222];
-}
-
-.presentation-text {
-  @apply text-base text-[#3a3a3a] max-w-[500px];
 }
 </style>

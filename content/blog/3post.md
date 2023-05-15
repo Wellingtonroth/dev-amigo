@@ -3,7 +3,6 @@ title: "Random Post"
 coverImage: /_nuxt/assets/images/avatar.png
 author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
-text: Some description here Wellington Roth
 createdAt: "2023-03-22T12:34:56.789Z"
 subjects:
   - HTML

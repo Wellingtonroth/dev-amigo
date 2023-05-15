@@ -3,7 +3,6 @@ title: Not so Life
 coverImage: /_nuxt/assets/images/avatar.png
 author: Eu mesmo
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
-text: Some description hereSome description hereSome description here Some description here Some description here Some description here Some description hereSome description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here Some description here 
 createdAt: "2023-03-20T12:34:56.789Z"
 subjects:
   - CSS
