@@ -24,6 +24,6 @@ const { data } = useAsyncData(`content-${route.path}`, () =>
 
 <style scoped>
 .main-box {
-  @apply flex items-center flex-col w-full;
+  @apply flex items-center flex-col w-full dark:text-gray-200;
 }
 </style>

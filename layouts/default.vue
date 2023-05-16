@@ -59,7 +59,10 @@ const setColorTheme = (newTheme) => {
       <ul class="socials-list">
         <li>
           <a href="https://github.com/Wellingtonroth" target="_blank">
-            <img width="30px" height="30px" src="../assets/images/github.png" alt="github" />
+            <!-- <img width="30px" height="30px" src="../assets/images/github.png" alt="github" /> -->
+            <svg>
+              <use xlink:href="~/assets/icons/custom-icons.svg#github"></use>
+            </svg>
           </a>
         </li>
         <li>
@@ -93,7 +96,7 @@ const setColorTheme = (newTheme) => {
   @apply flex gap-4 font-medium;
 }
 .item {
-  @apply pb-1 hover:text-yellow-500 dark:text-gray-200;
+  @apply pb-1 hover:text-yellow-500 dark:text-gray-200 dark:hover:text-yellow-500;
 }
 
 .content {

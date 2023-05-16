@@ -57,7 +57,7 @@
         :alt="selectedInformation.alt" 
         class="image-selected"
       />
-      <div class="description">
+      <div class="description dark:text-gray-200">
         <h3>{{ selectedInformation.selected.title }}</h3>
         <p>{{ selectedInformation.selected.text }}</p>
       </div>
@@ -164,7 +164,7 @@ export default {
 }
 
 .caption {
-  @apply absolute bottom-0 left-0 right-0 top-0 flex items-center	justify-center font-bold text-4xl text-black;
+  @apply absolute bottom-0 left-0 right-0 top-0 flex items-center	justify-center font-bold text-4xl text-black dark:text-gray-200;
 }
 .list {
   @apply ml-12;

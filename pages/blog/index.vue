@@ -87,15 +87,15 @@ const filteredPosts = computed(() =>
 }
 
 .post-link {
-  @apply  flex flex-col justify-between hover:shadow-sm hover:bg-[#f2f2f2] pt-5 pr-5 pl-5;
+  @apply  flex flex-col justify-between hover:shadow-sm hover:bg-[#f2f2f2] pt-5 pr-5 pl-5 dark:hover:bg-[#2d3748];
 }
 
 .post-title {
-  @apply text-xl font-medium text-[#222] mb-1;
+  @apply text-xl font-medium text-[#222] mb-1 dark:text-gray-200;
 }
 
 .posts-summary {
-  @apply text-base text-[#3a3a3a];
+  @apply text-base text-[#3a3a3a] dark:text-gray-200;
 }
 
 .tags {
@@ -107,7 +107,7 @@ const filteredPosts = computed(() =>
 }
 
 .filter-subject {
-  @apply mr-5 text-[12px] uppercase font-medium cursor-pointer hover:text-yellow-500;;
+  @apply mr-5 text-[12px] uppercase font-medium cursor-pointer hover:text-yellow-500 dark:text-gray-200 dark:hover:text-yellow-500;
 }
 
 .subject-filtered {
