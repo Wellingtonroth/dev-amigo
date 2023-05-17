@@ -34,6 +34,10 @@ const filteredPosts = computed(() =>
     );
   })
 );
+
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString('pt-BR');
+};
 </script>
 
 <template>
@@ -60,13 +64,25 @@ const filteredPosts = computed(() =>
         <NuxtLink :to="post._path">
           <div class="flex justify-between">
             <div class="w-[80%]">
-              <h2 class="post-title">{{ post.title }}</h2>
-              <p class="posts-summary">{{ post.summary }}</p>
+              <div class="flex items-center justify-between items-start">
+                <h2 class="post-title">
+                  {{ post.title }}
+                </h2>
+                <span class="dark:text-gray-200 text-sm">
+                  {{ formatDate(post.createdAt) }}
+                </span>
+              </div>
+              <p class="posts-summary">
+                {{ post.summary }}
+              </p>
             </div>
-          <img :src="post.coverImage" alt="Cover Image" style="width: 80px; height: 80px;">
+
+            <img :src="post.coverImage" alt="Cover Image" style="width: 80px; height: 80px;">
           </div>
           <div class="tags">
-            <span class="subjects">{{ post.subjects.join(' - ') }}</span>
+            <span class="subjects">
+              {{ post.subjects.join(' - ') }}
+            </span>
           </div>
         </NuxtLink>
         <div class="border-b-[1px] border-gray-200 my-5"></div>
