@@ -1,5 +1,5 @@
 ---
-title: "Random Post"
+title: Como conseguir um estágio?
 coverImage: /_nuxt/assets/images/avatar.png
 author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj

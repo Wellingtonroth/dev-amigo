@@ -1,7 +1,7 @@
 ---
-title: Arroz e feijao
+title: Como fazer uma função?
 coverImage: /_nuxt/assets/images/avatar.png
-author: salada
+author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 createdAt: "2023-03-21T12:34:56.789Z"
 subjects:

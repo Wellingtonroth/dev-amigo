@@ -1,7 +1,7 @@
 ---
-title: Not so Life
+title: Como fazer deploy?
 coverImage: /_nuxt/assets/images/avatar.png
-author: Eu mesmo
+author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 createdAt: "2023-03-20T12:34:56.789Z"
 subjects:
