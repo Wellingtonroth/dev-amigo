@@ -13,11 +13,12 @@
           v-if="information.image === 'brain'" 
           :style="opacityImage(information.id)"
           version="1.0" xmlns="http://www.w3.org/2000/svg"
-          width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
-          preserveAspectRatio="xMidYMid meet">
+          viewBox="0 0 256.000000 256.000000"
+          preserveAspectRatio="xMidYMid meet"
+          class="apply-style-svg">
           <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
           fill="#000000" stroke="none"
-          class="dark:fill-gray-200"
+          class="apply-style-svg"
           >
           <path d="M893 2546 c-94 -31 -165 -89 -215 -175 -16 -28 -33 -42 -59 -50 -50
           -15 -125 -84 -155 -142 -13 -27 -27 -76 -31 -109 -6 -58 -8 -62 -53 -95 -112
@@ -91,13 +92,13 @@
         <svg 
           v-if="information.image === 'heart'" 
           :style="opacityImage(information.id)" 
-          class="dark:fill-gray-200"
+          class="apply-style-svg"
           version="1.0" xmlns="http://www.w3.org/2000/svg"
-          width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
+          viewBox="0 0 256.000000 256.000000"
           preserveAspectRatio="xMidYMid meet">
           <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
           fill="#000000" stroke="none"
-          class="dark:fill-gray-200"
+          class="apply-style-svg"
           >
           <path d="M1223 2544 c-51 -25 -73 -70 -74 -150 l-1 -69 -14 45 c-9 25 -23 62
           -31 83 -46 107 -206 101 -241 -11 -13 -39 -12 -49 17 -147 l31 -106 -36 -43
@@ -149,13 +150,13 @@
         <svg 
           v-if="information.image === 'computer'" 
           :style="opacityImage(information.id)"
-          class="dark:fill-gray-200"
+          class="apply-style-svg"
           version="1.0" xmlns="http://www.w3.org/2000/svg"
-          width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
+          viewBox="0 0 256.000000 256.000000"
           preserveAspectRatio="xMidYMid meet">
           <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
           fill="#000000" stroke="none"
-          class="dark:fill-gray-200"
+          class="apply-style-svg"
           >
           <path d="M216 2537 c-80 -45 -76 -7 -76 -760 0 -739 -2 -713 64 -760 31 -22
           36 -22 429 -25 l398 -3 -5 -32 c-3 -18 -8 -72 -11 -120 -3 -49 -9 -95 -12
@@ -553,7 +554,7 @@ export default {
 
 <style scoped>
 .main {
-  @apply flex justify-center items-center w-full;
+  @apply flex justify-center items-center w-full s-phone:flex-col phone:flex-col tablet:flex-col;
 }
 
 .image-container {
@@ -564,16 +565,20 @@ export default {
   @apply absolute bottom-0 left-0 right-0 top-0 flex items-center	justify-center font-bold text-4xl text-black dark:text-gray-200;
 }
 .list {
-  @apply ml-12;
+  @apply s-desktop:ml-12 desktop:ml-12 b-desktop:ml-12 s-phone:mb-5 phone:mb-5 tablet:mb-5;
 }
 
 .list:first-child {
-  @apply ml-0 mr-2;
+  @apply ml-0 s-desktop:mr-2 desktop:mr-2 b-desktop:mr-2;
 }
 
 .image-selected {
   width: 200px;
   height: 200px;
+}
+
+.apply-style-svg {
+  @apply s-phone:w-48 s-phone:h-48 phone:w-48 phone:h-48 w-64 h-64 dark:fill-gray-200;
 }
 </style>
 
