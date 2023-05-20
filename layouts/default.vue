@@ -93,7 +93,7 @@ const setColorTheme = (newTheme) => {
 }
 
 .navigation {
-  @apply main-container pt-10 pb-10 flex justify-center;
+  @apply main-container py-9 flex justify-center;
 }
 .list {
   @apply flex gap-4 font-medium;
@@ -103,11 +103,11 @@ const setColorTheme = (newTheme) => {
 }
 
 .content {
-  @apply flex h-full;
+  @apply s-desktop:flex s-desktop:h-full desktop:h-full b-desktop:h-full tablet:main-container s-desktop:main-container desktop:main-container b-desktop:main-container;
 }
 
 .footer {
-  @apply main-container flex justify-between py-10 mt-10 border-t-[1px] border-black dark:border-gray-700;
+  @apply main-container flex justify-between py-9 mt-9 border-t-[1px] border-black dark:border-gray-700;
 }
 
 .socials-list {

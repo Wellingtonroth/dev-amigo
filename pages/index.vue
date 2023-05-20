@@ -59,8 +59,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex mr-[100px] ml-[100px]">
-    <div class="flex-col justify-center items-center box">
+  <div class="s-desktop:flex desktop:flex b-desktop:flex s-desktop:items-center desktop:items-center b-desktop:items-center s-phone:items-center s-phone:flex-col s-desktop:flex-row desktop:mr-[100px] desktop:ml-[100px] s-desktop:mr-[20px] s-desktop:ml-[20px]">
+    <div class="flex-col justify-center items-center tablet:mx-1 phone:mx-1 s-phone:mx-1 box">
       <div class="presentation" v-if="currentPresentation" :key="currentPresentation.id">
         <h3 class="presentation-title">
           {{ currentPresentation.title }}
@@ -82,7 +82,9 @@ onMounted(() => {
     </div>
 
     <div class="box post">
-      <h3 class="last-posts">Ultimos posts</h3>
+      <h3 class="last-posts">
+        Ultimos posts
+      </h3>
       <NuxtLink 
         v-for="(post, index) in lastThreePosts" 
         :key="index"
@@ -90,7 +92,11 @@ onMounted(() => {
         class="link"
       >
         <div class="post-link">
-          <img :src="post.coverImage" alt="Cover Image" style="width: 200px; height: 154px;">
+          <img 
+            :src="post.coverImage" 
+            alt="Cover Image" 
+            class="desktop:w-[180px] desktop:h-[150px] b-desktop:w-[180px] b-desktop:desktop:h-[150px] s-desktop:w-[180px] s-desktop:h-[150px] tablet:w-[155px] tablet:h-[145px] phone:w-[150px] phone:h-[140px] s-phone:w-[145px] s-phone:h-[135px]"
+          />
 
           <div class="content">
             <div>
@@ -102,7 +108,9 @@ onMounted(() => {
               </p>
             </div>
             <div class="tags">
-              <span class="subjects">{{ post.subjects.join(' - ') }}</span>
+              <span class="subjects">
+                {{ post.subjects.join(' - ') }}
+              </span>
             </div>
           </div>
         </div>
@@ -117,7 +125,7 @@ onMounted(() => {
 
 <style scoped>
 .box {
-  @apply flex w-2/4 h-full mr-2;
+  @apply flex s-desktop:w-2/4 b-desktop:w-2/4 desktop:w-2/4 h-full;
 }
 
 .presentation {
@@ -132,12 +140,8 @@ onMounted(() => {
   @apply text-base text-[#3a3a3a] max-w-[500px] dark:text-gray-200;
 }
 
-.name {
-  @apply text-[24px];
-}
-
 .post {
-  @apply flex-col justify-center;
+  @apply flex-col justify-center s-phone:mt-5 phone:mt-5 tablet:mt-5;
 }
 
 .link {
@@ -145,7 +149,7 @@ onMounted(() => {
 }
 
 .post-link {
-  @apply flex mt-[10px] mb-[10px] ml-[30px];
+  @apply flex mt-[10px] mb-[10px] s-desktop:ml-[30px] tablet:mx-1 phone:mx-1 s-phone:mx-1;
 }
 .last-posts {
   @apply ml-[30px] text-[18px] font-medium text-[#222] dark:text-gray-200;

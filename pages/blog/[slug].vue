@@ -13,13 +13,20 @@ const formatDate = (date) => {
 <template>
   <div class="main-box">
     <div class="w-[760px]">
-      <NuxtLink to="/blog">Voltar</NuxtLink>
+      <NuxtLink to="/blog">
+        Voltar
+      </NuxtLink>
     </div>
     <div class="w-[760px] mb-7 pb-4 apply-border">
-      <h2 class="text-4xl font-semibold mb-2">{{ data.title }}</h2>
+      <h2 class="text-4xl font-semibold mb-2">
+        {{ data.title }}</h2>
       <div class="flex justify-between">
-        <p class="text-xl">{{ data.author }}</p>
-        <span class="text-sm">Publicado em {{ formatDate(data.createdAt) }}</span>
+        <p class="text-xl">
+          {{ data.author }}
+        </p>
+        <span class="text-sm">
+          Publicado em {{ formatDate(data.createdAt) }}
+        </span>
       </div>
     </div>
     
