@@ -224,14 +224,15 @@
     </li>
   </ul>
 
-  <div v-if="showDescription" class="w-full	h-full">
-    <div class="cursor-pointer w-fit" @click="backToList">
+  <div v-if="showDescription" class="w-full	h-full s-phone:px-3 phone:px-3">
+    <div class="pointer-back" @click="backToList">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
-        preserveAspectRatio="xMidYMid meet">
+        viewBox="0 0 512.000000 512.000000"
+        preserveAspectRatio="xMidYMid meet"
+        class="apply-style-svg arrow-icon">
         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
         fill="#000000" stroke="none"
-        class="dark:fill-gray-200"
+        class="apply-style-svg arrow-icon"
         >
         <path d="M2330 5110 c-494 -48 -950 -230 -1350 -538 -195 -150 -448 -432 -594
         -662 -63 -99 -186 -351 -230 -471 -51 -139 -103 -344 -128 -504 -31 -200 -31
@@ -253,9 +254,9 @@
       </svg>
     </div>
 
-    <div class="flex">
+    <div class="s-phone:flex-col phone:flex-col flex items-center	max-w-[768px] m-auto mt-4">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-      width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
+      viewBox="0 0 256.000000 256.000000"
       preserveAspectRatio="xMidYMid meet"
       class="image-selected"
       v-if="selectedInformation.image === 'brain'" 
@@ -332,7 +333,7 @@
       </svg>
 
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
+        viewBox="0 0 256.000000 256.000000"
         preserveAspectRatio="xMidYMid meet"
         class="image-selected"
         v-if="selectedInformation.image === 'heart'" 
@@ -391,7 +392,7 @@
         v-if="selectedInformation.image === 'computer'" 
         class="image-selected dark:fill-gray-200"
         version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
+         viewBox="0 0 256.000000 256.000000"
         preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
         fill="#000000" stroke="none"
@@ -455,9 +456,9 @@
         20 -98 6z"/>
         </g>
       </svg>
-      <div class="description dark:text-gray-200">
-        <h3>{{ selectedInformation.selected.title }}</h3>
-        <p>{{ selectedInformation.selected.text }}</p>
+      <div class="s-phone:mt-5 phone:mt-5 tablet:ml-5 s-desktop:ml-5 desktop:ml-5 b-desktop:ml-5 dark:text-gray-200">
+        <h3 class="text-4xl mb-2 font-semibold">{{ selectedInformation.selected.title }}</h3>
+        <p class="text-xl">{{ selectedInformation.selected.text }}</p>
       </div>
     </div>
   </div>
@@ -476,7 +477,7 @@ export default {
         name: 'Essência',
         selected: {
           title: 'Informações Essenciais',
-          text: 'Adoro aprender coisas novas, principalmente quando envolve tecnologia. Sou muito curioso e gosto de entender como as coisas funcionam. E sou idealizador do canal ZZZZZZ com o intuito de mostrar ao mundo o conhecimento que adiquiri ao longo da vida.',
+          text: 'Tenho uma grande paixão por aprender coisas novas, especialmente quando se trata de tecnologia. Sou extremamente curioso e adoro desvendar o funcionamento das coisas. Além disso, sou o criador do canal ZZZZZZ, onde compartilho o conhecimento que adquiri ao longo da vida, ajudando tanto pessoas que já estão na área quanto aqueles que desejam ingressar no campo da tecnologia.',
         },
       },
       { 
@@ -486,7 +487,7 @@ export default {
         name: 'Trabalho',
         selected: {
           title: 'Front-end',
-          text: 'Sou desenvolvedor front-end e tenho conhecimento de tecnologias como Javascript, Vue.js, React.js, Nuxt.js, Tailwindcss, Sass, Styled Components, entre outras.',
+          text: 'Sou um desenvolvedor front-end com habilidades em diversas tecnologias, incluindo Javascript, Jest, Node.js, Vue.js, Vuex, Pinia, React.js, Nuxt.js, Tailwindcss, Sass, Styled-Components, SEO, Wordpress e outras.',
         }
       },
       { 
@@ -496,7 +497,7 @@ export default {
         name: 'Paixão',
         selected: {
           title: 'Minhas Paixões',
-          text: 'Sou apaixonado por varias coisas como: Aprender alguma tecnologia nova; Ouvir música enquanto trabalho; Ver series e filmes com minha família; Adoro animais; Jogar jogos com amigos; Ir para academia; Viajar para conhecer novos lugares e culturas;',
+          text: 'Tenho paixão por diversas coisas, tais como: aprender novas tecnologias, ouvir música enquanto trabalho, assistir séries e filmes com minha família, animais, jogar jogos com amigos, frequentar a academia e viajar para conhecer novos lugares, comidas e culturas.',
         }
       },
     ]);
@@ -573,12 +574,19 @@ export default {
 }
 
 .image-selected {
-  width: 200px;
-  height: 200px;
+  @apply desktop:w-[650px] b-desktop:w-[650px] s-desktop:w-[650px] tablet:w-[650px] s-phone:w-[250px] phone:w-[250px];
 }
 
 .apply-style-svg {
   @apply s-phone:w-48 s-phone:h-48 phone:w-48 phone:h-48 w-64 h-64 dark:fill-gray-200;
+}
+
+.arrow-icon {
+  @apply w-6 h-6;
+}
+
+.pointer-back {
+  @apply cursor-pointer w-fit;
 }
 </style>
 
