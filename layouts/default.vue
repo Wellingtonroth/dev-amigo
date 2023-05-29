@@ -54,7 +54,7 @@ const setColorTheme = (newTheme) => {
 
     <footer class="footer">
       <div>
-        <img class="mix-blend-darken" src="../assets/images/wroth.jpg" alt="wellington roth" width="100px" height="100px">
+        <img class="mix-blend-darken" src="../public/wroth.jpg" alt="wellington roth" width="100px" height="100px">
       </div>
       <ul class="socials-list">
         <li>
