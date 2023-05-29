@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxt/image-edge'],
   colorMode: {
     classSuffix: ''
   },
@@ -9,5 +9,8 @@ export default defineNuxtConfig({
     exposeConfig: false,
     injectPosition: 0,
     viewer: true,
+  },
+  image: {
+    provider: 'ipx',
   },
 })
