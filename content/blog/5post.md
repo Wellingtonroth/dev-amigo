@@ -1,6 +1,6 @@
 ---
 title: O que é css?
-coverImage: /_nuxt/public/avatar.png
+coverImage: avatar.png
 author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 createdAt: "2023-03-24T12:34:56.789Z"
