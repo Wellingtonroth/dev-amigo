@@ -12,12 +12,12 @@ const formatDate = (date) => {
 
 <template>
   <div class="main-box">
-    <div class="w-[760px]">
+    <div class="s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px]">
       <NuxtLink to="/blog" class="border-b-[2px] border-yellow-400 text-xs">
         Voltar
       </NuxtLink>
     </div>
-    <div class="w-[760px] mb-7 pb-4 apply-border">
+    <div class="s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px] mb-7 pb-4 apply-border">
       <h2 class="text-4xl font-semibold mb-2">
         {{ data.title }}</h2>
       <div class="flex justify-between">

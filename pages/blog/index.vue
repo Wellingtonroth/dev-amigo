@@ -42,7 +42,7 @@ const formatDate = (date) => {
 
 <template>
   <div class="main-box">
-    <div class="filter-list">
+    <div class="filter-list s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px]">
       <ul class="flex">
         <li
           class="filter-subject"
@@ -55,7 +55,7 @@ const formatDate = (date) => {
         </li>
       </ul>
     </div>
-    <ul class="w-[760px]">
+    <ul class="s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px]">
       <li
         v-for="post in filteredPosts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))"
         :key="post._id"
@@ -99,7 +99,7 @@ const formatDate = (date) => {
 }
 
 .filter-list {
-  @apply flex justify-end w-[760px] mb-5 pb-5 border-b-[1px] border-gray-200;
+  @apply flex justify-end mb-5 pb-5 border-b-[1px] border-gray-200;
 }
 
 .post-link {
