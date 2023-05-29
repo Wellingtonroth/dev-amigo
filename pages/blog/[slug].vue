@@ -13,7 +13,7 @@ const formatDate = (date) => {
 <template>
   <div class="main-box">
     <div class="w-[760px]">
-      <NuxtLink to="/blog">
+      <NuxtLink to="/blog" class="border-b-[2px] border-yellow-400 text-xs">
         Voltar
       </NuxtLink>
     </div>
