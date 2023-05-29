@@ -30,7 +30,7 @@ const formatDate = (date) => {
       </div>
     </div>
     
-    <div class="w-[760px]">
+    <div class="s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px]">
       <ContentRenderer :value="data" />
     </div>
   </div>

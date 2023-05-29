@@ -21,9 +21,6 @@ Anyway, I digress. Back to my chatbot. I've been training it on a large dataset 
 But for now, it's time for me to take a break and go for a **run**. I find that exercise helps me clear my mind and come up with new ideas. Who knows, maybe I'll stumble upon a new insight that will help me break free from my Markovian cycle. 
 
 ```
-const { data: posts } = await useAsyncData('posts', () =>
-  queryContent('/blog').find(),
-);
 
 ```
 

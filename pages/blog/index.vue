@@ -41,7 +41,7 @@ const formatDate = (date) => {
 </script>
 
 <template>
-  <div class="main-box">
+  <div class="main-box s-phone:px-4 phone:px-4">
     <div class="filter-list s-phone:w-full phone:w-full tablet:w-[760px] s-desktop:w-[760px] desktop:w-[760px] b-desktop:w-[760px]">
       <ul class="flex">
         <li
