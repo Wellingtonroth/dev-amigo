@@ -12,19 +12,15 @@ const lastThreePosts = posts.value
 const presentationList = ref([
   { 
     title: 'Olá, me chamo Wellington Roth.',
-    presentation: 'Sou desenvolvedor frontend e idealizador do canal XXXX.'
+    presentation: 'Sou desenvolvedor frontend e idealizador do canal Dev Amigo.',
   },
   { 
-    title: 'Ja conhece o canal XXXX?',
-    presentation: 'Se não conhece, da uma olhada, tenho certeza que vai gostar.'
-  },
-  { 
-    title: 'XXXXX',
-    presentation: 'XXXX é um projeto solo que criei com o intuito de compartilhar conhecimento.'
+    title: 'Dev Amigo',
+    presentation: 'Dev Amigo é um projeto solo que criei com o intuito de compartilhar conhecimento.'
   },
   { 
     title: 'Conteúdos diversos',
-    presentation: 'No canal XXXX você vai encontrar dicas e conteúdos diversos sobre tecnologia, programação, desenvolvimento web, produtividade e foco.'
+    presentation: 'No canal Dev Amigo você vai encontrar dicas e conteúdos diversos sobre tecnologia, programação, desenvolvimento web, produtividade e foco.'
   },
 ]);
 const currentIndex = ref(0);
