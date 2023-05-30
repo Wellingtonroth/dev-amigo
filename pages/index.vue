@@ -83,7 +83,7 @@ onMounted(() => {
 
     <div class="box post">
       <h3 class="last-posts">
-        Ultimos postsssssss
+        Ultimos posts
       </h3>
       <NuxtLink 
         v-for="(post, index) in lastThreePosts" 

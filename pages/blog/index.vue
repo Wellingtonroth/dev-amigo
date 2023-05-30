@@ -78,7 +78,7 @@ const formatDate = (date) => {
             </div>
 
             <img
-              :src="`posts/${post.coverImage}`" 
+              :src="post.coverImage" 
               alt="Cover Image" 
               style="width: 80px; height: 80px;"
             >

@@ -1,6 +1,6 @@
 ---
 title: Como conseguir um estágio?
-coverImage: /_nuxt/public/avatar.png
+coverImage: avatar.png
 author: Wellington Roth
 summary: dwihahdwoahoadw awodiwdiohjidw oinfaoiwdjo fepogouihsa fiwfuiahwfa ioafwhidja owadhoiaj
 createdAt: "2023-03-22T12:34:56.789Z"
