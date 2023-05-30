@@ -11,8 +11,12 @@ subjects:
 ## Introdução
 CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para controlar a apresentação e o layout das páginas da web. Se você está começando a aprender programação, entender o que é CSS e como utilizá-lo é fundamental para criar designs atraentes e funcionais. Neste post, vamos explicar de forma clara e acessível o que é CSS e como usá-lo para estilizar suas páginas web.
 
+<br>
+
 ## O que é CSS?
-CSS é uma linguagem de estilo que trabalha em conjunto com o HTML para definir a aparência e o layout dos elementos em uma página da web. Com o CSS, é possível definir cores, fontes, espaçamentos, tamanhos, posicionamentos e diversos outros aspectos visuais.
+<span class="destaque">CSS é uma linguagem de estilo</span> que trabalha em conjunto com o HTML para definir a aparência e o layout dos elementos em uma página da web. Com o CSS, é possível definir cores, fontes, espaçamentos, tamanhos, posicionamentos e diversos outros aspectos visuais.
+
+<br>
 
 ## Como funciona o CSS?
 O CSS funciona aplicando estilos aos elementos HTML através de seletores. Os seletores identificam quais elementos devem receber determinados estilos. Por exemplo, o seletor "h1" é usado para estilizar todos os títulos de nível 1 em uma página.
@@ -27,6 +31,8 @@ h1 {
 ```
 
 Nesse exemplo, a cor do texto de todos os títulos de nível 1 será azul, e o tamanho da fonte será de 24 pixels.
+
+<br>
 
 ## Exemplo de código CSS
 Aqui está um exemplo simples de código CSS que estiliza um parágrafo e um link:
@@ -55,6 +61,8 @@ Aqui está um exemplo simples de código CSS que estiliza um parágrafo e um lin
 </body>
 </html>
 ```
+
+<br>
 
 ## Conclusão
 CSS desempenha um papel crucial na criação de layouts atraentes e estilos personalizados para suas páginas da web. Compreender os conceitos básicos do CSS é essencial para qualquer desenvolvedor web iniciante
