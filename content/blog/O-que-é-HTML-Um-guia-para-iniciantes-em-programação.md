@@ -3,7 +3,7 @@ title: O que é HTML? Um guia para iniciantes em programação
 coverImage: avatar.png
 author: Wellington Roth
 summary: Entenda o que é HTML e como essa linguagem de marcação é fundamental para a estruturação e organização do conteúdo em páginas da web, permitindo a criação de elementos como textos, imagens, links e formulários.
-createdAt: "2023-03-20T12:34:56.789Z"
+createdAt: "2023-06-03T12:34:56.789Z"
 subjects:
   - HTML
 ---
@@ -64,4 +64,6 @@ As tags HTML podem ter atributos que fornecem informações adicionais sobre os 
 ## Conclusão:
 HTML é a base de qualquer página da web e entender seus conceitos básicos é essencial para quem está começando na programação. Com este guia, você aprendeu o que é HTML e como estruturar uma página web. Agora você está pronto para mergulhar mais fundo e explorar todo o potencial do HTML na construção de sites incríveis!
 
-Espero que este post tenha sido útil e tenha proporcionado um entendimento básico sobre HTML. Continue aprendendo e explorando novos recursos do HTML para aprimorar suas habilidades de desenvolvimento web.
+<br>
+
+Eai, curtiu? Espero que esse post tenha sido útil. Fique à vontade para explorar mais conteúdos no site ou no meu canal [**Dev Amigo**](https://www.youtube.com/channel/UCc0FTXTrZFKK7V_3gmdUFOw){:target="_blank" style="color: rgb(250 204 21)"} e expandir seus conhecimentos nesse fascinante mundo da tecnologia.
