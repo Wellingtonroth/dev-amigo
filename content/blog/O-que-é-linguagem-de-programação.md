@@ -21,6 +21,8 @@ Para um iniciante em programação, é importante compreender alguns conceitos f
 ## Por que aprender uma linguagem de programação?
 Aprender uma linguagem de programação abre portas para inúmeras oportunidades no campo da tecnologia. Com habilidades de programação, é possível criar soluções personalizadas, resolver problemas complexos, automatizar tarefas e até mesmo construir sua própria carreira como desenvolvedor.
 
+<br>
+
 ## Conclusão
 A linguagem de programação é uma ferramenta essencial para interagir e controlar o comportamento dos computadores. Ao compreender os conceitos fundamentais e dominar uma linguagem de programação, você se capacita a criar soluções inovadoras e se destacar no campo da tecnologia. Aprender uma linguagem de programação é um investimento valioso para o futuro, pois oferece diversas oportunidades e abre caminho para uma carreira promissora no desenvolvimento de software e sistemas tecnológicos. Portanto, não hesite em embarcar nessa jornada e explorar todo o potencial que a programação tem a oferecer.
 
