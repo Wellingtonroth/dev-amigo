@@ -1,6 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
+useHead({
+  titleTemplate: 'Dev Amigo',
+})
+
 const { data: posts } = await useAsyncData('posts', () =>
   queryContent('/blog').find(),
 );

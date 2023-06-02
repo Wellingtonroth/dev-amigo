@@ -1,13 +1,18 @@
 <script setup>
+
 const route = useRoute();
 
 const { data } = useAsyncData(`content-${route.path}`, () =>
-  queryContent().where({_path: route.path}).findOne()
+queryContent().where({_path: route.path}).findOne()
 );
 
 const formatDate = (date) => {
   return new Date(date).toLocaleDateString('pt-BR');
 };
+
+useHead({
+  titleTemplate: `Dev Amigo - Blog`,
+})
 </script>
 
 <template>

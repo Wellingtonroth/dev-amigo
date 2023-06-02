@@ -1,4 +1,8 @@
 <script setup>
+useHead({
+  titleTemplate: 'Dev Amigo - Sobre',
+})
+
 const setColorTheme = (newTheme) => {
   useColorMode().preference = newTheme
 }
@@ -15,7 +19,7 @@ const setColorTheme = (newTheme) => {
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/about" class="item">
+            <NuxtLink to="/sobre" class="item">
               Sobre
             </NuxtLink>
           </li>

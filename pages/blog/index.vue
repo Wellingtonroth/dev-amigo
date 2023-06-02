@@ -1,6 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue';
 
+useHead({
+  titleTemplate: 'Dev Amigo - Blog',
+})
+
 const selectedSubjects = ref([]);
 
 const { data: posts } = await useAsyncData('posts', () =>
