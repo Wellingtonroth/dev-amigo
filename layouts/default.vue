@@ -62,7 +62,7 @@ const setColorTheme = (newTheme) => {
       </div> -->
       <ul class="socials-list">
         <li>
-          <a href="https://www.youtube.com/channel/UCc0FTXTrZFKK7V_3gmdUFOw" target="_blank" aria-label="Canal do YouTube">
+          <a href="https://youtube.com/@dev-amigo" target="_blank" aria-label="Canal do YouTube">
             <svg class="svg-dark" version="1.0" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 512.000000 512.000000"
               preserveAspectRatio="xMidYMid meet">
               <g class="svg-dark" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">

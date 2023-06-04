@@ -69,4 +69,4 @@ CSS desempenha um papel crucial na criação de layouts atraentes e estilos pers
 
 <br>
 
-Eai, curtiu? Espero que esse post tenha sido útil. Fique à vontade para explorar mais conteúdos no site ou no meu canal [**Dev Amigo**](https://www.youtube.com/channel/UCc0FTXTrZFKK7V_3gmdUFOw){:target="_blank" style="color: rgb(250 204 21)"} e expandir seus conhecimentos nesse fascinante mundo da tecnologia.
+Eai, curtiu? Espero que esse post tenha sido útil. Fique à vontade para explorar mais conteúdos no site ou no meu canal [**Dev Amigo**](https://youtube.com/@dev-amigo){:target="_blank" style="color: rgb(250 204 21)"} e expandir seus conhecimentos nesse fascinante mundo da tecnologia.
