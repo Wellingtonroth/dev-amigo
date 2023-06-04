@@ -57,9 +57,9 @@ const setColorTheme = (newTheme) => {
     </section>
 
     <footer class="footer">
-      <div>
-        <img class="mix-blend-darken" src="../public/wroth.jpg" alt="wellington roth" width="100px" height="100px">
-      </div>
+      <!-- <div>
+        <img class="mix-blend-darken" src="../public/Dev-amigo.png" alt="wellington roth">
+      </div> -->
       <ul class="socials-list">
         <li>
           <a href="https://www.youtube.com/channel/UCc0FTXTrZFKK7V_3gmdUFOw" target="_blank" aria-label="Canal do YouTube">
